@@ -1,10 +1,10 @@
 # Stock Visualizer
-Python application using Finnhub API to access real-time stock data
+Python application to access real-time data about a company's stock price and latest economic news by entering stock symbol
 
-## How It Works
-* Uses Requests and json Python libraries to access the API
-* Users enter stock symbol they wish to view
-* All relevant information is outputted to screen
+## Features
+* Utilizes Finnhub API to access stocks, company and news
+* Implements `requests` and `json` libraries to make HTTP web requests
+* Uses `datetime` library to access current date for latest news and format UNIX timestamp from API
 
 ## Preview
 ![image](VisualizerExample.png)
