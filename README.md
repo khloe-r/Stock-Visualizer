@@ -5,6 +5,7 @@ Python application to access real-time data about a company's stock price and la
 * Utilizes Finnhub API to access stocks, company and news
 * Implements `requests` and `json` libraries to make HTTP web requests
 * Uses `datetime` library to access current date for latest news and format UNIX timestamp from
+* Uses `matplotlib` library for data visualization of stock prices throughout a day
 
 ## Preview
 ![image](VisualizerExample.png)

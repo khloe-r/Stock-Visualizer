@@ -2,6 +2,8 @@
 import requests
 import json
 from datetime import date, datetime
+# Import libraries for data visualization
+import matplotlib.pyplot as plt
 # Use Secrets for API token
 import os
 TOKEN = os.environ['FINNHUB_API_KEY'] #Secret Environment Variable
@@ -39,9 +41,18 @@ newsdict = json.loads(companyNews.content)
 
 # Calculate percent change since day prior
 value = stockdict['c']
+highestValue = stockdict['h']
+lowestValue = stockdict['l']
 previousClose = stockdict['pc']
 percentChange = ((value - previousClose)/previousClose) * 100
 companyName = companydict['name']
+
+# Output visualization
+x=['Highest of the Day','Lowest of the Day','Current']
+y=[highestValue, lowestValue, value]
+plt.ylim(lowestValue-1, highestValue+1)
+plt.bar(x,y)
+plt.show()
 
 # Output desired information
 print(companyName + f' ({line})' + ':')
